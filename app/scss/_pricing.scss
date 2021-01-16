@@ -1,0 +1,140 @@
+.pricing {
+  &__table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+    }
+  }
+
+  &__plan {
+    width: 21.875rem;
+    padding: 1.875rem 2.1875rem;
+    text-align: center;
+    margin-bottom: 1.875rem;
+    box-shadow: 0px 0px 35px 5px rgba(163, 168, 240, 0.15);
+
+    &.light {
+      background-color: white;
+      color: $grayishBlue;
+      border-radius: 10px;
+    }
+
+    &.dark {
+      background: linear-gradient(to bottom, $lightPurple, $darkPurple);
+      color: $white;
+      border-radius: 10px;
+    }
+
+    &.basic {
+      @include breakpoint-up(large) {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+    }
+
+    &.professional {
+      @include breakpoint-up(large) {
+        padding: 3.4375rem 2.1875rem;
+      }
+    }
+
+    &.master {
+      @include breakpoint-up(large) {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+      }
+    }
+
+    &-title {
+      font-size: $font-med;
+      margin-bottom: 1.25rem;
+    }
+
+    &-price {
+      font-size: $font-xl;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      &.light {
+        color: $darkGrayishBlue;
+      }
+
+      &-currency {
+        font-size: 2.5rem;
+        margin-right: 0.3125rem;
+      }
+
+      &-amount {
+        &.monthly {
+        }
+
+        &.annually {
+          display: none;
+        }
+      }
+    }
+
+    &-features {
+      margin-bottom: 2rem;
+
+      &-item {
+        border-top: 1px solid $lightGray;
+        padding: 0.9375rem 0;
+
+        &:last-child {
+          border-bottom: 1px solid $lightGray;
+        }
+
+        &.dark {
+          border-top: 1.5px solid $veryLightPurple;
+
+          &:last-child {
+            border-bottom: 1px solid $veryLightPurple;
+          }
+        }
+      }
+    }
+
+    &-cta {
+      position: relative;
+      display: inline-block;
+      padding: 0.75rem 0;
+      width: 100%;
+      border: 1px solid $white;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      font-size: $font-xsm;
+      letter-spacing: 0.09375rem;
+      text-transform: uppercase;
+
+      &.light {
+        background: linear-gradient(to right, $lightPurple, $darkPurple);
+        color: $white;
+
+        &:hover {
+          background: $white;
+          color: $darkPurple;
+          border: 1px solid $darkPurple;
+        }
+      }
+
+      &.dark {
+        background: $white;
+        color: $darkPurple;
+
+        &:hover {
+          color: $white;
+          background: transparent;
+          border: 1px solid $white;
+        }
+      }
+    }
+  }
+}

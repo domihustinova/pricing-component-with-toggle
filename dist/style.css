@@ -16,10 +16,199 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 0.9375rem;
-  font-weight: 700;
+  background-color: #f6f6fe;
+  background-image: url("/images/bg-bottom.svg"), url("/images/bg-top.svg");
+  background-position: bottom left, top right;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+@media (max-width: 39.9375em) {
+  body {
+    background-image: url("/images/bg-top.svg");
+    background-repeat: no-repeat;
+    background-position-x: 50vw;
+    background-position-y: -40px;
+  }
 }
 
 ul {
   list-style: none;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.pricing__table {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 64em) {
+  .pricing__table {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.pricing__plan {
+  width: 21.875rem;
+  padding: 1.875rem 2.1875rem;
+  text-align: center;
+  margin-bottom: 1.875rem;
+  -webkit-box-shadow: 0px 0px 35px 5px rgba(163, 168, 240, 0.15);
+          box-shadow: 0px 0px 35px 5px rgba(163, 168, 240, 0.15);
+}
+
+.pricing__plan.light {
+  background-color: white;
+  color: #6d708d;
+  border-radius: 10px;
+}
+
+.pricing__plan.dark {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to bottom, #a3a8f0, #696fdd);
+  color: white;
+  border-radius: 10px;
+}
+
+@media (min-width: 64em) {
+  .pricing__plan.basic {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+@media (min-width: 64em) {
+  .pricing__plan.professional {
+    padding: 3.4375rem 2.1875rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .pricing__plan.master {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+.pricing__plan-title {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+
+.pricing__plan-price {
+  font-size: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pricing__plan-price.light {
+  color: #494c5f;
+}
+
+.pricing__plan-price-currency {
+  font-size: 2.5rem;
+  margin-right: 0.3125rem;
+}
+
+.pricing__plan-price-amount.annually {
+  display: none;
+}
+
+.pricing__plan-features {
+  margin-bottom: 2rem;
+}
+
+.pricing__plan-features-item {
+  border-top: 1px solid #dbdbdb;
+  padding: 0.9375rem 0;
+}
+
+.pricing__plan-features-item:last-child {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.pricing__plan-features-item.dark {
+  border-top: 1.5px solid #a4a6e5;
+}
+
+.pricing__plan-features-item.dark:last-child {
+  border-bottom: 1px solid #a4a6e5;
+}
+
+.pricing__plan-cta {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 0;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  letter-spacing: 0.09375rem;
+  text-transform: uppercase;
+}
+
+.pricing__plan-cta.light {
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: white;
+}
+
+.pricing__plan-cta.light:hover {
+  background: white;
+  color: #696fdd;
+  border: 1px solid #696fdd;
+}
+
+.pricing__plan-cta.dark {
+  background: white;
+  color: #696fdd;
+}
+
+.pricing__plan-cta.dark:hover {
+  color: white;
+  background: transparent;
+  border: 1px solid white;
 }
 /*# sourceMappingURL=style.css.map */
