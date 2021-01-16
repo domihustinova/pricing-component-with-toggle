@@ -15,7 +15,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: $font-sm;
   background-color: $veryLightGrayishBlue;
-  background-image: url("/images/bg-bottom.svg"), url("/images/bg-top.svg");
+  background-image: url("../images/bg-bottom.svg"), url("../images/bg-top.svg");
   background-position: bottom left, top right;
   background-repeat: no-repeat;
   display: flex;
@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
 
   @include breakpoint-down(small) {
-    background-image: url("/images/bg-top.svg");
+    background-image: url("../images/bg-top.svg");
     background-repeat: no-repeat;
     background-position-x: 50vw;
     background-position-y: -40px;
