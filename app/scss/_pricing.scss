@@ -104,6 +104,7 @@
       font-size: $font-sm;
       letter-spacing: 0.09375rem;
       text-transform: uppercase;
+      transition: all 200ms ease-in-out;
 
       &.light {
         background: linear-gradient(to right, $lightPurple, $darkPurple);

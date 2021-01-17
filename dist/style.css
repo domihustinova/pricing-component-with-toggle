@@ -180,6 +180,8 @@ a:hover {
   font-size: 0.8125rem;
   letter-spacing: 0.09375rem;
   text-transform: uppercase;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .pricing__plan-cta.light {
