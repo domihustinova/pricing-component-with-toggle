@@ -1,9 +1,14 @@
 .header {
-  padding: 4.375rem;
+  margin-top: 4.375rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include breakpoint-up(large) {
+    margin-bottom: 4rem;
+  }
 
   &__title {
     color: $grayishBlue;
