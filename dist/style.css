@@ -20,19 +20,6 @@ body {
   background-image: url("../images/bg-bottom.svg"), url("../images/bg-top.svg");
   background-position: bottom left, top right;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-height: 100vh;
 }
 
@@ -210,5 +197,81 @@ a:hover {
   color: white;
   background: transparent;
   border: 1px solid white;
+}
+
+.header {
+  padding: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__title {
+  color: #6d708d;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.header__frequency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__frequency-option {
+  color: #b3b5c6;
+}
+
+.header__frequency-toggle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 56px;
+  height: 32px;
+  border: 0;
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background: linear-gradient(to right, #a3a8f0, #696fdd);
+  margin: 0 24px;
+  cursor: pointer;
+}
+
+.header__frequency-toggle::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 28px;
+  top: 3.5px;
+  background-color: white;
+  border-radius: 34px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.header__frequency-toggle:hover {
+  opacity: 0.5;
+}
+
+.header__frequency-toggle.annualy::before {
+  -webkit-transform: translateX(-24px);
+          transform: translateX(-24px);
 }
 /*# sourceMappingURL=style.css.map */
